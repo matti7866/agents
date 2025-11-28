@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import API_BASE_URL from '../config/api';
 import './Dashboard.css';
-
-const API_BASE_URL = 'http://127.0.0.1/snt/api';
 
 interface Residence {
   residenceID: number;
