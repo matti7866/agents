@@ -77,13 +77,28 @@ export default function Layout() {
             ))}
           </div>
 
-          <Link 
-            to="/change-password" 
-            className={`nav-item ${location.pathname === '/change-password' ? 'active' : ''}`}
-          >
-            <i className="fas fa-key"></i>
-            <span>Change Password</span>
-          </Link>
+          <div className="nav-section">
+            <div className="nav-section-title">
+              <i className="fas fa-cog"></i>
+              <span>Settings & Tools</span>
+            </div>
+            
+            <Link 
+              to="/test-sms" 
+              className={`nav-item nav-step ${location.pathname === '/test-sms' ? 'active' : ''}`}
+            >
+              <i className="fas fa-sms"></i>
+              <span>Test SMS Service</span>
+            </Link>
+
+            <Link 
+              to="/change-password" 
+              className={`nav-item nav-step ${location.pathname === '/change-password' ? 'active' : ''}`}
+            >
+              <i className="fas fa-key"></i>
+              <span>Change Password</span>
+            </Link>
+          </div>
 
           <button onClick={logout} className="nav-item logout-btn">
             <i className="fas fa-sign-out-alt"></i>

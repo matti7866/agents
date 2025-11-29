@@ -7,6 +7,7 @@ import ChangePassword from './pages/ChangePassword';
 import Dashboard from './pages/Dashboard';
 import ResidenceDetails from './pages/ResidenceDetails';
 import Ledger from './pages/Ledger';
+import TestSMS from './pages/TestSMS';
 import Layout from './components/Layout';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -52,6 +53,7 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="residence/:id" element={<ResidenceDetails />} />
             <Route path="ledger" element={<Ledger />} />
+            <Route path="test-sms" element={<TestSMS />} />
             <Route path="change-password" element={<ChangePassword />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
